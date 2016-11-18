@@ -95,8 +95,8 @@ before_deploy:
     fi;
   - if [ "$PLATFORM" = "javascript" ]; then
       if [ "$TARGET" = "release" ]; then target_tag="opt"; else target_tag="opt.debug"; fi;
-      cp tools/html_fs/godot.html .;
-      cp tools/html_fs/godotfs.js .;
+      cp tools/dist/html_fs/godot.html .;
+      cp tools/dist/html_fs/godotfs.js .;
       cp -f bin/godot.javascript.$target_tag.js godot.js;
       cp -f bin/godot.javascript.$target_tag.html.mem godot.mem;
       zip bin/godot.javascript.$target_tag.zip godot.js godot.mem godotfs.js godot.html;
