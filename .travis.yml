@@ -46,9 +46,11 @@ env:
     - PLATFORM=android TARGET=release ANDROID_ARCH=armv7
     - PLATFORM=android TARGET=release ANDROID_ARCH=arm64v8
     - PLATFORM=android TARGET=release ANDROID_ARCH=x86
+    - PLATFORM=android TARGET=release ANDROID_ARCH=x86_64
     - PLATFORM=android TARGET=release_debug ANDROID_ARCH=armv7
     - PLATFORM=android TARGET=release_debug ANDROID_ARCH=arm64v8
     - PLATFORM=android TARGET=release_debug ANDROID_ARCH=x86
+    - PLATFORM=android TARGET=release_debug ANDROID_ARCH=x86_64
 
 matrix:
   exclude:
@@ -59,11 +61,15 @@ matrix:
     - os: linux
       env: PLATFORM=android TARGET=release ANDROID_ARCH=x86
     - os: linux
+      env: PLATFORM=android TARGET=release ANDROID_ARCH=x86_64
+    - os: linux
       env: PLATFORM=android TARGET=release_debug ANDROID_ARCH=armv7
     - os: linux
       env: PLATFORM=android TARGET=release_debug ANDROID_ARCH=arm64v8
     - os: linux
       env: PLATFORM=android TARGET=release_debug ANDROID_ARCH=x86
+    - os: linux
+      env: PLATFORM=android TARGET=release_debug ANDROID_ARCH=x86_64
     - os: linux
       env: PLATFORM=iphone TARGET=release
     - os: linux
@@ -113,11 +119,15 @@ matrix:
     - compiler: clang
       env: PLATFORM=android TARGET=release ANDROID_ARCH=x86
     - compiler: clang
+      env: PLATFORM=android TARGET=release ANDROID_ARCH=x86_64
+    - compiler: clang
       env: PLATFORM=android TARGET=release_debug ANDROID_ARCH=armv7
     - compiler: clang
       env: PLATFORM=android TARGET=release_debug ANDROID_ARCH=arm64v8
     - compiler: clang
       env: PLATFORM=android TARGET=release_debug ANDROID_ARCH=x86
+    - compiler: clang
+      env: PLATFORM=android TARGET=release_debug ANDROID_ARCH=x86_64
     - compiler: clang
       env: PLATFORM=server BITS=64 TOOLS=yes TARGET=release_debug
     - compiler: clang
@@ -205,6 +215,8 @@ before_deploy:
         android_arch="armeabi-v7a";
       elif [ "$ANDROID_ARCH" = "arm64v8" ]; then
         android_arch="arm64-v8a";
+      elif [ "$ANDROID_ARCH" = "x86_64" ]; then
+        android_arch="x86_64";
       else
         android_arch="x86";
       fi;
