@@ -1,0 +1,10 @@
+diff --git a/version.py b/version.py
+index 14548c9d..ae682ae1 100644
+--- a/version.py
++++ b/version.py
+@@ -3,4 +3,4 @@ name = "Godot Engine"
+ major = 2
+ minor = 1
+ patch = 7
+-status = "rc"
++status = "rc1"
