@@ -164,7 +164,7 @@ before_script:
       fi;
     fi;
   - if [ "$PLATFORM" = "javascript" ]; then
-      docker run -dit --name emscripten -v $(pwd)/godot:/src trzeci/emscripten-slim sh;
+      docker run -dit --name emscripten -v $(pwd)/godot:/src trzeci/emscripten-slim:sdk-tag-1.38.32-64bit sh;
       docker exec -it emscripten apt-get update -qq;
       docker exec -it emscripten apt-get install -y scons;
     fi;
