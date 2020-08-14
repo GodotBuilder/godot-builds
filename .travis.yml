@@ -32,9 +32,9 @@ env:
     - PLATFORM=iphone TARGET=release_debug
     - PLATFORM=javascript TARGET=release
     - PLATFORM=javascript TARGET=release_debug
-    - PLATFORM=osx BITS=fat TOOLS=yes TARGET=release_debug
-    - PLATFORM=osx BITS=fat TOOLS=no TARGET=release
-    - PLATFORM=osx BITS=fat TOOLS=no TARGET=release_debug
+    - PLATFORM=osx BITS=64 TOOLS=yes TARGET=release_debug
+    - PLATFORM=osx BITS=64 TOOLS=no TARGET=release
+    - PLATFORM=osx BITS=64 TOOLS=no TARGET=release_debug
     - PLATFORM=server BITS=64 TOOLS=yes TARGET=release_debug
     - PLATFORM=x11 BITS=32 TOOLS=yes TARGET=release_debug
     - PLATFORM=x11 BITS=32 TOOLS=no TARGET=release
@@ -74,11 +74,11 @@ matrix:
     - os: linux
       env: PLATFORM=iphone TARGET=release_debug
     - os: linux
-      env: PLATFORM=osx BITS=fat TOOLS=yes TARGET=release_debug
+      env: PLATFORM=osx BITS=64 TOOLS=yes TARGET=release_debug
     - os: linux
-      env: PLATFORM=osx BITS=fat TOOLS=no TARGET=release
+      env: PLATFORM=osx BITS=64 TOOLS=no TARGET=release
     - os: linux
-      env: PLATFORM=osx BITS=fat TOOLS=no TARGET=release_debug
+      env: PLATFORM=osx BITS=64 TOOLS=no TARGET=release_debug
     - os: osx
       env: PLATFORM=javascript TARGET=release
     - os: osx
@@ -106,11 +106,11 @@ matrix:
     - compiler: gcc
       env: PLATFORM=javascript TARGET=release_debug
     - compiler: gcc
-      env: PLATFORM=osx BITS=fat TOOLS=yes TARGET=release_debug
+      env: PLATFORM=osx BITS=64 TOOLS=yes TARGET=release_debug
     - compiler: gcc
-      env: PLATFORM=osx BITS=fat TOOLS=no TARGET=release
+      env: PLATFORM=osx BITS=64 TOOLS=no TARGET=release
     - compiler: gcc
-      env: PLATFORM=osx BITS=fat TOOLS=no TARGET=release_debug
+      env: PLATFORM=osx BITS=64 TOOLS=no TARGET=release_debug
     - compiler: clang
       env: PLATFORM=android TARGET=release ANDROID_ARCH=armv7
     - compiler: clang
