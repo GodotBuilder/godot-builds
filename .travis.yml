@@ -11,7 +11,6 @@ branches:
   - 2.0
   - 2.1
 
-
 compiler:
   - gcc
   - clang
@@ -150,9 +149,9 @@ before_script:
   - if [ "$TRAVIS_OS_NAME" = "osx" ] && [ "$PLATFORM" = "android" ]; then
       brew tap caskroom/cask; brew cask install android-sdk;
       export ANDROID_HOME=/usr/local/share/android-sdk;
-      wget https://dl.google.com/android/repository/android-ndk-r17-darwin-x86_64.zip;
-      unzip -d $HOME android-ndk-r17-darwin-x86_64.zip | grep -v "inflating:" | grep -v "creating:";
-      export ANDROID_NDK_ROOT="$HOME/android-ndk-r17";
+      wget https://dl.google.com/android/repository/android-ndk-r21d-darwin-x86_64.zip;
+      unzip -d $HOME android-ndk-r21d-darwin-x86_64.zip | grep -v "inflating:" | grep -v "creating:";
+      export ANDROID_NDK_ROOT="$HOME/android-ndk-r21d";
     fi;
   - if [ "$PLATFORM" = "x11" ] || [ "$PLATFORM" = "server" ]; then
       sudo rm -f /etc/apt/sources.list.d/*.list;
