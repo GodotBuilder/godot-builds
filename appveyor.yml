@@ -91,7 +91,7 @@ deploy:
   description: 'Godot binaries deployed by Travis CI and AppVeyor'
   provider: GitHub
   auth_token:
-    secure: DYTTAkQFPIDq2YL6hPMOttlHdJ9ZL6dYdOtGFIEneO8BTYx6keJRvewsdzgP2QGA
+    secure: NkkgDdlKir3GGjwwtCX6B09Z0i1kYiUbV1QTFCdm7gyHSJbIFotCL7OqNt81r9sw
   artifact: GodotBinary
   on:
     appveyor_repo_tag: true
